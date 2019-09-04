@@ -7,20 +7,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zweizweisechs.github.io">
-  <title>return JS基本介绍 | 不愧是杨瑞妍的个人博客</title>
+  <title>arguments JS | 不愧是杨瑞妍的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="return JS基本介绍 先看看这段基础代码 alert(fn1());function fn1() {    return 100} 结果：窗口弹出100 再看看这段代码 alert(fn1());function fn1() {    return 100;    alert(200)} 结果：窗口弹出100  return基础总结">
+  <meta name="description" content="arguments JS基础 arguments基本用法 其实可以将其看成一个数组，但是本身它不是数组，它是一个对象，不能使用数组的方法，它是实参的集合  结果：窗口弹出1  arguments 运用">
 <meta name="keywords" content="前端JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="return JS基本介绍">
-<meta property="og:url" content="https://zweizweisechs.github.io/2019/09/04/return JS基本介绍/index.html">
+<meta property="og:title" content="arguments JS">
+<meta property="og:url" content="https://zweizweisechs.github.io/2019/09/04/arguments JS基础/index.html">
 <meta property="og:site_name" content="不愧是杨瑞妍的个人博客">
-<meta property="og:description" content="return JS基本介绍 先看看这段基础代码 alert(fn1());function fn1() {    return 100} 结果：窗口弹出100 再看看这段代码 alert(fn1());function fn1() {    return 100;    alert(200)} 结果：窗口弹出100  return基础总结">
+<meta property="og:description" content="arguments JS基础 arguments基本用法 其实可以将其看成一个数组，但是本身它不是数组，它是一个对象，不能使用数组的方法，它是实参的集合  结果：窗口弹出1  arguments 运用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-04T04:27:31.146Z">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code1.jpg">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code2.jpg">
+<meta property="og:updated_time" content="2019-09-04T11:53:50.984Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="return JS基本介绍">
-<meta name="twitter:description" content="return JS基本介绍 先看看这段基础代码 alert(fn1());function fn1() {    return 100} 结果：窗口弹出100 再看看这段代码 alert(fn1());function fn1() {    return 100;    alert(200)} 结果：窗口弹出100  return基础总结">
+<meta name="twitter:title" content="arguments JS">
+<meta name="twitter:description" content="arguments JS基础 arguments基本用法 其实可以将其看成一个数组，但是本身它不是数组，它是一个对象，不能使用数组的方法，它是实参的集合  结果：窗口弹出1  arguments 运用">
+<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="不愧是杨瑞妍的个人博客" type="application/atom+xml">
   
@@ -158,22 +161,22 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-return JS基本介绍" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-arguments JS基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      return JS基本介绍
+      arguments JS
     </h1>
   
 
         <!--显示阅读次数-->
         <!--显示阅读次数完毕-->
         
-        <a href="/zweizweisechs.github.io/2019/09/04/return JS基本介绍/" class="archive-article-date">
-  	<time datetime="2019-09-04T04:00:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+        <a href="/zweizweisechs.github.io/2019/09/04/arguments JS基础/" class="archive-article-date">
+  	<time datetime="2019-09-04T11:55:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
 </a>
         
       </header>
@@ -181,43 +184,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<h2 id="return-JS基本介绍"><a href="#return-JS基本介绍" class="headerlink" title="return JS基本介绍"></a>return JS基本介绍</h2></blockquote>
-<p><strong>先看看这段基础代码</strong></p>
-<p><code>alert(fn1());function fn1() {    return 100}</code></p>
-<p><strong>结果：</strong>窗口弹出100</p>
-<p><strong>再看看这段代码</strong></p>
-<p><code>alert(fn1());function fn1() {    return 100;    alert(200)}</code></p>
-<p><strong>结果：</strong>窗口弹出100</p>
-<hr>
-<p><strong>return基础总结</strong></p>
+<h3 id="arguments-JS基础"><a href="#arguments-JS基础" class="headerlink" title="arguments JS基础"></a>arguments JS基础</h3></blockquote>
+<p><strong>arguments基本用法</strong></p>
+<p>其实可以将其看成一个数组，但是本身它不是数组，它是一个对象，不能使用数组的方法，它是实参的集合</p>
+<p><img src="/zweizweisechs.github.io/images/code1.jpg" alt></p>
+<p><strong>结果：</strong>窗口弹出1</p>
+<blockquote>
+<h3 id="arguments-运用"><a href="#arguments-运用" class="headerlink" title="arguments 运用"></a>arguments 运用</h3></blockquote>
 <a id="more"></a>
-
-<ul>
-<li>函数名+括号 ：fn1() ==&gt;return后面的值</li>
-</ul>
-<ul>
-<li>特殊情况</li>
-</ul>
-<p><code>alert(fn1());function fn1() {    return}</code></p>
-<p><strong>结果：</strong>窗口弹出undefined</p>
-<p><strong>原因：</strong>所有函数默认返回值undefined</p>
-<ul>
-<li>return后面的任何代码都不会执行</li>
-</ul>
-<hr>
-<blockquote>
-<h2 id="return的特性带来的好处"><a href="#return的特性带来的好处" class="headerlink" title="return的特性带来的好处"></a>return的特性带来的好处</h2></blockquote>
-<p><code>&lt;div id=&quot;box&quot;&gt;123&lt;/div&gt;</code></p>
-<p><code>&lt;script&gt;</code></p>
-<p><code>function fn1(id) {</code></p>
-<p><code>return document.getElementById(id);</code></p>
-<p><code>}</code></p>
-<p><code>alert(fn1(&#39;box&#39;).innerHTML);</code></p>
-<p><strong>结果：</strong>获取到了id名为box的小方块，其实在这里相当于jquery里面的$。利用return的上述特性，将函数名字换成$。就是jquery里面所封装的函数。</p>
-<hr>
-<blockquote>
-<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2></blockquote>
-<p>今天的知识点很简单，主要是想要写博客练练手。以后我会尽量每日更新的。大家有啥问题可以在下方给我留言</p>
+<p><strong>问题：</strong>调用sum函数，实现对sum(1,2,3),sum(1,2,3,4)中数字的求和</p>
+<p><strong>问题分析：</strong>这里对函数调用参数的个数不同，这种情况我们就可以利用arguments实现当参数个数不同的时候，实现对函数的调用</p>
+<p><strong>实现</strong></p>
+<p><img src="/zweizweisechs.github.io/images/code2.jpg" alt></p>
 
       
 
@@ -308,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/09/04/return JS基本介绍/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/09/04/arguments JS基础/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,8 +302,8 @@
 <nav id="article-nav">
   
   
-    <a href="/zweizweisechs.github.io/2019/08/27/blogNo.2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">blog-No.2</div>
+    <a href="/zweizweisechs.github.io/2019/09/03/return JS基本介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">return JS基本介绍</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -411,6 +389,7 @@
 <!--页面点击小红心-->
 <script type="text/javascript" src="/zweizweisechs.github.io/love.js"></script>
 
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -480,15 +459,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">个人博客的第一篇博文</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端JS</a>
               </li>
             
             <div class="clearfix"></div>
