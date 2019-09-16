@@ -7,22 +7,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zweizweisechs.github.io">
-  <title>blog-No.2 | 不愧是杨瑞妍的个人博客</title>
+  <title>event事件对象介绍与应用 | 不愧是杨瑞妍的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！">
-<meta name="keywords" content="生活">
+  <meta name="description" content="event事件对象 介绍  当一个事件发生的时候，和当前这个对象发生的这个事件邮观的一些详细的信息都会被临时保存到一个指定地方event对象，供我们在需要的调用。 类比一下就是   飞机-黑匣子 注意：事件对象必须要在一个事件调用的函数里面才有内容 事件函数：事件调用的函数，不是由函数定义决定，看调用的时候 function fn1(){alert(event)};fn1()//不是一个事件调用">
+<meta name="keywords" content="前端JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog-No.2">
-<meta property="og:url" content="https://zweizweisechs.github.io/2019/08/27/blogNo.2/index.html">
+<meta property="og:title" content="event事件对象介绍与应用">
+<meta property="og:url" content="https://zweizweisechs.github.io/2019/09/16/event事件对象/index.html">
 <meta property="og:site_name" content="不愧是杨瑞妍的个人博客">
-<meta property="og:description" content="是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！">
+<meta property="og:description" content="event事件对象 介绍  当一个事件发生的时候，和当前这个对象发生的这个事件邮观的一些详细的信息都会被临时保存到一个指定地方event对象，供我们在需要的调用。 类比一下就是   飞机-黑匣子 注意：事件对象必须要在一个事件调用的函数里面才有内容 事件函数：事件调用的函数，不是由函数定义决定，看调用的时候 function fn1(){alert(event)};fn1()//不是一个事件调用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/TIM%E5%9B%BE%E7%89%8720190827203028.jpg">
-<meta property="og:updated_time" content="2019-08-27T13:59:44.496Z">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code8.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code10.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code9.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code11.png">
+<meta property="og:updated_time" content="2019-09-16T13:47:52.065Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog-No.2">
-<meta name="twitter:description" content="是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！">
-<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/TIM%E5%9B%BE%E7%89%8720190827203028.jpg">
+<meta name="twitter:title" content="event事件对象介绍与应用">
+<meta name="twitter:description" content="event事件对象 介绍  当一个事件发生的时候，和当前这个对象发生的这个事件邮观的一些详细的信息都会被临时保存到一个指定地方event对象，供我们在需要的调用。 类比一下就是   飞机-黑匣子 注意：事件对象必须要在一个事件调用的函数里面才有内容 事件函数：事件调用的函数，不是由函数定义决定，看调用的时候 function fn1(){alert(event)};fn1()//不是一个事件调用">
+<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code8.png">
   
     <link rel="alternative" href="/atom.xml" title="不愧是杨瑞妍的个人博客" type="application/atom+xml">
   
@@ -160,39 +163,69 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-blogNo.2" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-event事件对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      blog-No.2
+      event事件对象介绍与应用
     </h1>
   
 
         <!--显示阅读次数-->
         <!--显示阅读次数完毕-->
         
-        <a href="/zweizweisechs.github.io/2019/08/27/blogNo.2/" class="archive-article-date">
-  	<time datetime="2019-08-27T13:55:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+        <a href="/zweizweisechs.github.io/2019/09/16/event事件对象/" class="archive-article-date">
+  	<time datetime="2019-09-16T13:50:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！"><a href="#是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！" class="headerlink" title="是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！"></a>是非黑白不需要你讲，我要燃烧所有生命赐予的力量！！</h1><p><img src="/zweizweisechs.github.io/images/TIM%E5%9B%BE%E7%89%8720190827203028.jpg" alt="TIM图片20190827203028"></p>
+        <h2 id="event事件对象"><a href="#event事件对象" class="headerlink" title="event事件对象"></a>event事件对象</h2><blockquote>
+<p>介绍</p>
+</blockquote>
+<p>当一个事件发生的时候，和当前这个对象发生的这个事件邮观的一些详细的信息都会被临时保存到一个指定地方event对象，供我们在需要的调用。</p>
+<p>类比一下就是   <strong>飞机-黑匣子</strong></p>
+<p><strong>注意</strong>：事件对象必须要在一个事件调用的函数里面才有内容</p>
+<p><strong>事件函数：事件调用的函数，不是由函数定义决定，看调用的时候</strong></p>
+<p><code>function fn1(){alert(event)};fn1()</code>//不是一个事件调用</p>
+<p><code>function fn1(){alert(event);document.onclick=fn1;}</code>//是一个时间调用</p>
+<blockquote>
+<p>兼容</p>
+</blockquote>
+<p><strong>ie/chrome</strong>：event是一个内置全局对象</p>
+<p><strong>firefox</strong>:  事件对象是通过事件函数的第一个参数传入的。如果一个函数是被事件调用的，那么这个函数定义的第一个参数就是事件对象。</p>
+<p><code>function fn1(ev){alert(ev);}</code></p>
+<p><strong>解决兼容问题</strong></p>
+<p><img src="/zweizweisechs.github.io/images/code8.png" alt></p>
 <a id="more"></a>
 
-
-<h3 id="标题取自《哪吒之魔童降世》"><a href="#标题取自《哪吒之魔童降世》" class="headerlink" title="标题取自《哪吒之魔童降世》"></a>标题取自《哪吒之魔童降世》</h3><p>爷爷去世，这三天我看到了人生百态。家庭之间的，社会之间的各种各样的事情，让我一时踹不过气来，我找不到一个突破口。不仅各种各样的事情，各式各样的人，看透了许多事情，也对许多事情不解。什么是非黑白，我都不想再要去听到。爷爷安静地走了，生命赐予的力量燃烧尽了，我想只要在那一刻他才觉得世界安静了。这几天听了许多的话，同一个人说不同的话，不同的人说同一个话，不同的人说不同的话。。。。。其实人生，是非黑白又怎能说得清楚呢？我只知道，爷爷是真的走了，我也不能再握着他的手跟他聊天，给他力量。也不能听他一本正经讲道理，讲打仗故事了。他就躺在那里，一动也不动。</p>
-<hr>
-<p>今天送爷爷去火化，我看到了爷爷三天后的样子。。。。其实我一点也不害怕，可能是我认得出来这是他，想得起来他跟我说话的样子。我看着他躺在那里，我一直在看着他直到他随着滑轮被运送进入火化的地方。像一个货物般被运送。最后只剩下骨灰。这个场景我一直在脑里想了很久很久，我不知道怎么形容，但是我想把我这时候的感觉记录下来。爷爷，真的和我说再见了。</p>
-<hr>
-<p>​                                                                                                                                                                               2019.8.27</p>
-<p>​</p>
-<p>​</p>
+<blockquote>
+<p>event对象里面的内容</p>
+</blockquote>
+<p><strong>1.for循环全部遍历出来</strong></p>
+<p><img src="/zweizweisechs.github.io/images/code10.png" alt></p>
+<p><strong>2.控制台查看</strong></p>
+<p><img src="/zweizweisechs.github.io/images/code9.png" alt></p>
+<blockquote>
+<p>clientX,clientY</p>
+</blockquote>
+<p>ev.clienX ev.clientY拿到鼠标位置  </p>
+<p>触发频率不是像素，而是间隔时间，在一个指定时间内（很短），如果鼠标的位置和上次的位置发生了变化，那么就会触发了一次。</p>
+<p>5s内移动一次，就触发一次，移动多次，触发多次</p>
+<p>移动越快，触发越少，移动 ，触发越多。</p>
+<blockquote>
+<p>实例</p>
+</blockquote>
+<p>鼠标绑定正方形方块，使正方形方块跟随鼠标移动</p>
+<p><strong>实现</strong></p>
+<p><img src="/zweizweisechs.github.io/images/code11.png" alt></p>
+<p><strong>注意：</strong></p>
+<p>鼠标的值是相对于可视区的，但是div是根据页面算的，所以会出现误差，需要加上scrollTop（滚动条滚动距离）</p>
 
       
 
@@ -227,7 +260,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端JS</a>
         		</li>
       		
 		</ul>
@@ -283,7 +316,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/08/27/blogNo.2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/09/16/event事件对象/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +331,18 @@
   
 <nav id="article-nav">
   
-    <a href="/zweizweisechs.github.io/2019/09/03/return JS基本介绍/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/zweizweisechs.github.io/2019/09/16/Time/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          return JS基本介绍
+          Time
         
       </div>
     </a>
   
   
-    <a href="/zweizweisechs.github.io/2019/08/22/article-title/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">blog-No.1</div>
+    <a href="/zweizweisechs.github.io/2019/09/14/JS焦点事件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS焦点事件</div>
       <i class="icon-circle-right"></i>
     </a>
   
