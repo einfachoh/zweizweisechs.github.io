@@ -7,19 +7,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zweizweisechs.github.io">
-  <title>categories | 不愧是杨瑞妍的个人博客</title>
+  <title>vue基础(一) 基本指令 | 不愧是杨瑞妍的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是杨瑞妍的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://zweizweisechs.github.io/categories/index-1.html">
+  <meta name="description" content="Vue基础（一） vue.js、angular.js、react.js并称为前端三大主流框架  Vue.js可以帮助我们减少不必要的DOM操作，提高渲染效率；双向数据绑定的概念，解放了用户的双手，让程序员更多的去关注业务逻辑！！  node中的MVC  M：model  V：view C：controller  MVVM    初步使用vue   注意：我们new出来的这个vm对象，就是我们MVV">
+<meta name="keywords" content="前端Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue基础(一) 基本指令">
+<meta property="og:url" content="https://zweizweisechs.github.io/2019/09/24/Vue(一)/index.html">
 <meta property="og:site_name" content="不愧是杨瑞妍的个人博客">
-<meta property="og:description" content="这里是杨瑞妍的个人博客">
+<meta property="og:description" content="Vue基础（一） vue.js、angular.js、react.js并称为前端三大主流框架  Vue.js可以帮助我们减少不必要的DOM操作，提高渲染效率；双向数据绑定的概念，解放了用户的双手，让程序员更多的去关注业务逻辑！！  node中的MVC  M：model  V：view C：controller  MVVM    初步使用vue   注意：我们new出来的这个vm对象，就是我们MVV">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-23T07:32:45.650Z">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code12.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code13.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code14.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code15.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code16.png">
+<meta property="og:updated_time" content="2019-09-24T14:02:47.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="这里是杨瑞妍的个人博客">
+<meta name="twitter:title" content="vue基础(一) 基本指令">
+<meta name="twitter:description" content="Vue基础（一） vue.js、angular.js、react.js并称为前端三大主流框架  Vue.js可以帮助我们减少不必要的DOM操作，提高渲染效率；双向数据绑定的概念，解放了用户的双手，让程序员更多的去关注业务逻辑！！  node中的MVC  M：model  V：view C：controller  MVVM    初步使用vue   注意：我们new出来的这个vm对象，就是我们MVV">
+<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code12.png">
   
     <link rel="alternative" href="/atom.xml" title="不愧是杨瑞妍的个人博客" type="application/atom+xml">
   
@@ -156,29 +163,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            
+<article id="post-Vue(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      vue基础(一) 基本指令
     </h1>
   
 
         <!--显示阅读次数-->
         <!--显示阅读次数完毕-->
         
-        <a href="/zweizweisechs.github.io/categories/index-1.html" class="archive-article-date">
-  	<time datetime="2019-08-23T07:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
+        <a href="/zweizweisechs.github.io/2019/09/24/Vue(一)/" class="archive-article-date">
+  	<time datetime="2019-09-24T15:00:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="Vue基础（一）"><a href="#Vue基础（一）" class="headerlink" title="Vue基础（一）"></a>Vue基础（一）</h2><ul>
+<li>vue.js、angular.js、react.js并称为前端三大主流框架</li>
+</ul>
+<p>Vue.js可以帮助我们减少不必要的DOM操作，提高渲染效率；双向数据绑定的概念，解放了用户的双手，让程序员更多的去关注业务逻辑！！</p>
+<blockquote>
+<p>node中的MVC</p>
+</blockquote>
+<p>M：model </p>
+<p>V：view</p>
+<p>C：controller</p>
+<blockquote>
+<p>MVVM</p>
+</blockquote>
+<p><img src="/zweizweisechs.github.io/images/code12.png" alt></p>
+<blockquote>
+<p>初步使用vue</p>
+</blockquote>
+<p><img src="/zweizweisechs.github.io/images/code13.png" alt></p>
+<p><strong>注意：我们new出来的这个vm对象，就是我们MVVM中的VM调度者，data就是MVVM中的M</strong></p>
+<p>ctrl+shift+p，express打开。服务器监管</p>
+<blockquote>
+<p>v-cloak指令</p>
+</blockquote>
+<p>解决插值表达式闪烁的问题</p>
+<a id="more"></a>
+
+<blockquote>
+<p>v-text指令</p>
+</blockquote>
+<ul>
+<li>v-text默认没有闪烁问题</li>
+<li>v-text会覆盖元素中原本的内容，但是插值表达式只会替换自己的这个占位符</li>
+</ul>
+<blockquote>
+<p>v-html指令</p>
+</blockquote>
+<p>可以解析html元素</p>
+<p><img src="/zweizweisechs.github.io/images/code14.png" alt></p>
+<p><img src="/zweizweisechs.github.io/images/code15.png" alt></p>
+<blockquote>
+<p>v-bind指令</p>
+</blockquote>
+<ul>
+<li>绑定属性的指令</li>
+<li>可以被简写为一个： 例如：titile</li>
+</ul>
+<blockquote>
+<p>v-on 指令 </p>
+</blockquote>
+<ul>
+<li>v-on:click</li>
+<li>v-on:mouseover</li>
+</ul>
+<p><img src="/zweizweisechs.github.io/images/code16.png" alt></p>
+
       
 
       
@@ -207,6 +269,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">前端Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -257,7 +330,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/categories/index-1.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/09/24/Vue(一)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,6 +343,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/zweizweisechs.github.io/2019/09/18/未来，你是这样吗？/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">未来，你是这样吗？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -327,6 +410,7 @@
 
 
 
+
           </div>
         </div>
       </div>
@@ -355,7 +439,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
