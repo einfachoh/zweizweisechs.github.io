@@ -7,22 +7,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zweizweisechs.github.io">
-  <title>JS焦点事件 | 不愧是杨瑞妍的个人博客</title>
+  <title>Vue列表过滤和排序 | 不愧是杨瑞妍的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS焦点事件 焦点事件  多个相同元素，使浏览器能够接受区分用户输入的对象，当一个元素有焦点的时候，那么就可以接受用户的输入  设置焦点   点击 tab js  注意：不是所有元素都能接受焦点，只有响应用户输入的才接受焦点  实例：常规的输入框的提高用户体验的焦点事件  onfocus与onblur的运用  onfucs:当焦点被触发的时候调用  onblur:当焦点消失的时候调用   代码截图">
-<meta name="keywords" content="前端JS">
+  <meta name="description" content="关键实现步骤详解   过滤 1.首先考虑到实现过滤需要拿到两个参数，搜索内容与搜索的对象，对应searchName与Persons const{searchName,Persons}=this 2.定义一个新的数组来装入过滤后的对象 let filtershuzu 3.运用数组的filter函数，数组.filter(p=&amp;gt;true),true中的条件使用对属性使用indexof方法，如果！">
+<meta name="keywords" content="前端Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS焦点事件">
-<meta property="og:url" content="https://zweizweisechs.github.io/2019/09/14/JS焦点事件/index.html">
+<meta property="og:title" content="Vue列表过滤和排序">
+<meta property="og:url" content="https://zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/index.html">
 <meta property="og:site_name" content="不愧是杨瑞妍的个人博客">
-<meta property="og:description" content="JS焦点事件 焦点事件  多个相同元素，使浏览器能够接受区分用户输入的对象，当一个元素有焦点的时候，那么就可以接受用户的输入  设置焦点   点击 tab js  注意：不是所有元素都能接受焦点，只有响应用户输入的才接受焦点  实例：常规的输入框的提高用户体验的焦点事件  onfocus与onblur的运用  onfucs:当焦点被触发的时候调用  onblur:当焦点消失的时候调用   代码截图">
+<meta property="og:description" content="关键实现步骤详解   过滤 1.首先考虑到实现过滤需要拿到两个参数，搜索内容与搜索的对象，对应searchName与Persons const{searchName,Persons}=this 2.定义一个新的数组来装入过滤后的对象 let filtershuzu 3.运用数组的filter函数，数组.filter(p=&amp;gt;true),true中的条件使用对属性使用indexof方法，如果！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code7.png">
-<meta property="og:updated_time" content="2019-09-13T16:22:18.286Z">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code27.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/116.gif">
+<meta property="og:updated_time" content="2019-11-06T15:50:47.644Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS焦点事件">
-<meta name="twitter:description" content="JS焦点事件 焦点事件  多个相同元素，使浏览器能够接受区分用户输入的对象，当一个元素有焦点的时候，那么就可以接受用户的输入  设置焦点   点击 tab js  注意：不是所有元素都能接受焦点，只有响应用户输入的才接受焦点  实例：常规的输入框的提高用户体验的焦点事件  onfocus与onblur的运用  onfucs:当焦点被触发的时候调用  onblur:当焦点消失的时候调用   代码截图">
-<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code7.png">
+<meta name="twitter:title" content="Vue列表过滤和排序">
+<meta name="twitter:description" content="关键实现步骤详解   过滤 1.首先考虑到实现过滤需要拿到两个参数，搜索内容与搜索的对象，对应searchName与Persons const{searchName,Persons}=this 2.定义一个新的数组来装入过滤后的对象 let filtershuzu 3.运用数组的filter函数，数组.filter(p=&amp;gt;true),true中的条件使用对属性使用indexof方法，如果！">
+<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code27.png">
   
     <link rel="alternative" href="/atom.xml" title="不愧是杨瑞妍的个人博客" type="application/atom+xml">
   
@@ -160,78 +161,75 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-JS焦点事件" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Vue列表过滤和排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS焦点事件
+      Vue列表过滤和排序
     </h1>
   
 
         <!--显示阅读次数-->
         <!--显示阅读次数完毕-->
         
-        <a href="/zweizweisechs.github.io/2019/09/14/JS焦点事件/" class="archive-article-date">
-  	<time datetime="2019-09-13T16:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
+        <a href="/zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/" class="archive-article-date">
+  	<time datetime="2019-11-06T14:20:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JS焦点事件"><a href="#JS焦点事件" class="headerlink" title="JS焦点事件"></a>JS焦点事件</h2><blockquote>
-<p>焦点事件</p>
-</blockquote>
-<p>多个相同元素，使浏览器能够接受区分用户输入的对象，当一个元素有焦点的时候，那么就可以接受用户的输入</p>
-<blockquote>
-<p>设置焦点</p>
+        <blockquote>
+<p>关键实现步骤详解</p>
 </blockquote>
 <ul>
-<li>点击</li>
-<li>tab</li>
-<li>js</li>
-</ul>
-<p><strong>注意：</strong>不是所有元素都能接受焦点，只有响应用户输入的才接受焦点</p>
-<blockquote>
-<p>实例：常规的输入框的提高用户体验的焦点事件</p>
-</blockquote>
-<p>onfocus与onblur的运用</p>
-<ul>
-<li><p>onfucs:当焦点被触发的时候调用</p>
+<li><p>过滤</p>
+<p>1.首先考虑到实现过滤需要拿到两个参数，搜索内容与搜索的对象，对应searchName与Persons</p>
+<p><code>const{searchName,Persons}=this</code></p>
+<p>2.定义一个新的数组来装入过滤后的对象</p>
+<p><code>let filtershuzu</code></p>
+<p>3.运用数组的filter函数，数组.filter(p=&gt;true),true中的条件使用对属性使用indexof方法，如果！==-1则存在搜索内容，返回true,即将过滤出的数组赋给定义的数组。如果==-1，则不存在搜索内容，返回false,则不返回任何内容，即为空。</p>
+<p><code>filtershuzu=Persons.filter(p=&gt;p.name.indexOf(searchName)!==-1);</code></p>
+<p>4.返回新数组</p>
+<p><code>return filtershuzu;</code></p>
 </li>
-<li><p>onblur:当焦点消失的时候调用</p>
-</li>
-</ul>
-<p><strong>代码截图：</strong></p>
-<p><img src="/zweizweisechs.github.io/images/code7.png" alt></p>
+<li><p>排序</p>
+<p>1.本次实现升序降序，通过排序代号0，1，2代表原本顺序、降序、升序，通过改变排序代号的值表示实现不同顺序</p>
+<p>2.排序是在过滤之后执行的操作，所以在排序后继续编写程序，调用数组的sort方法，实现排序</p>
+<p><code>if(orderNumber!==0){</code></p>
+<p>​        <code>filtershuzu.sort(function(p1,p2){</code></p>
+<p>​          <code>if(orderNumber==1){</code></p>
+<p>​          <code>return p2.age-p1.age;</code></p>
+<p>​          <code>}else{</code></p>
+<p>​            <code>return p1.age-p2.age;</code></p>
+<p>​          <code>}</code></p>
+<p>​       <code>})</code></p>
+<p>​      <code>}</code></p>
 <a id="more"></a>
 
-
+<p>3.添加点击事件，为不同顺序匹配不同数值，定义设置数值的方法</p>
+<p><code>&lt;button type=&quot;button&quot; @click=&quot;orderNumberSet(1)&quot;&gt;年龄降序&lt;/button&gt;</code></p>
+<p>​      <code>&lt;button type=&quot;button&quot; @click=&quot;orderNumberSet(2)&quot;&gt;年龄升序&lt;/button&gt;</code></p>
+<p>​     <code>&lt;button type=&quot;button&quot; @click=&quot;orderNumberSet(0)&quot;&gt;原始排序&lt;/button&gt;</code></p>
+<p><code>methods: {</code></p>
+<p> <code>orderNumberSet(number){</code></p>
+<p>​    <code>this.orderNumber=number;</code></p>
+<p>   <code>}</code></p>
+<p><code>},</code></p>
+</li>
+</ul>
 <blockquote>
-<p>可复制代码</p>
+<p>最终代码截图</p>
 </blockquote>
-<p><code>&lt;script&gt;</code></p>
-<p><code>window.onload=function () {</code></p>
-<p><code>var oText=document.getElementById(&#39;text1&#39;);</code>    </p>
-<p><code>oText.onfocus=function () {</code>    </p>
-<p><code>if(this.value ==&#39;请输入内容&#39;){</code>        </p>
-<p><code>this.value=&#39;&#39;;</code>        </p>
-<p><code>}</code>        </p>
-<p><code>}</code>    </p>
-<p><code>oText.onblur=function () {</code>    </p>
-<p><code>if(this.value==&#39;&#39;){</code>        </p>
-<p><code>this.value=&#39;请输入内容&#39;</code>            </p>
-<p><code>}</code>        </p>
-<p><code>}</code>    </p>
-<p><code>oText.focus();</code>    </p>
-<p><code>}</code></p>
-<p><code>&lt;/script&gt;</code></p>
-<p><code>&lt;/body&gt;</code></p>
-<p><code>&lt;input type=&quot;text&quot; value=&quot;请输入内容&quot; id=&quot;text1&quot;&gt;</code></p>
-<p><code>&lt;/html&gt;</code></p>
+<p><img src="/zweizweisechs.github.io/images/code27.png" alt></p>
+<blockquote>
+<p>实现效果</p>
+</blockquote>
+<p><img src="/zweizweisechs.github.io/images/116.gif" alt></p>
 
       
 
@@ -266,7 +264,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端JS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">前端Vue</a>
         		</li>
       		
 		</ul>
@@ -322,7 +320,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/09/14/JS焦点事件/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -337,18 +335,9 @@
   
 <nav id="article-nav">
   
-    <a href="/zweizweisechs.github.io/2019/09/16/event事件对象/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          event事件对象介绍与应用
-        
-      </div>
-    </a>
   
-  
-    <a href="/zweizweisechs.github.io/2019/09/11/Someday/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Someday</div>
+    <a href="/zweizweisechs.github.io/2019/11/04/计算属性和监视/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue计算属性和监视</div>
       <i class="icon-circle-right"></i>
     </a>
   

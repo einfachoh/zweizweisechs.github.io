@@ -157,6 +157,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Vue列表过滤和排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/">Vue列表过滤和排序</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        <!--显示阅读次数完毕-->
+        
+        <a href="/zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/" class="archive-article-date">
+  	<time datetime="2019-11-06T14:20:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>关键实现步骤详解</p>
+</blockquote>
+<ul>
+<li><p>过滤</p>
+<p>1.首先考虑到实现过滤需要拿到两个参数，搜索内容与搜索的对象，对应searchName与Persons</p>
+<p><code>const{searchName,Persons}=this</code></p>
+<p>2.定义一个新的数组来装入过滤后的对象</p>
+<p><code>let filtershuzu</code></p>
+<p>3.运用数组的filter函数，数组.filter(p=&gt;true),true中的条件使用对属性使用indexof方法，如果！==-1则存在搜索内容，返回true,即将过滤出的数组赋给定义的数组。如果==-1，则不存在搜索内容，返回false,则不返回任何内容，即为空。</p>
+<p><code>filtershuzu=Persons.filter(p=&gt;p.name.indexOf(searchName)!==-1);</code></p>
+<p>4.返回新数组</p>
+<p><code>return filtershuzu;</code></p>
+</li>
+<li><p>排序</p>
+<p>1.本次实现升序降序，通过排序代号0，1，2代表原本顺序、降序、升序，通过改变排序代号的值表示实现不同顺序</p>
+<p>2.排序是在过滤之后执行的操作，所以在排序后继续编写程序，调用数组的sort方法，实现排序</p>
+<p><code>if(orderNumber!==0){</code></p>
+<p>​        <code>filtershuzu.sort(function(p1,p2){</code></p>
+<p>​          <code>if(orderNumber==1){</code></p>
+<p>​          <code>return p2.age-p1.age;</code></p>
+<p>​          <code>}else{</code></p>
+<p>​            <code>return p1.age-p2.age;</code></p>
+<p>​          <code>}</code></p>
+<p>​       <code>})</code></p>
+<p>​      <code>}</code></p>
+        
+          <a class="article-more-a" href="/zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">前端Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-计算属性和监视" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -972,101 +1076,6 @@
 
 
   
-    <article id="post-event事件对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zweizweisechs.github.io/2019/09/16/event事件对象/">event事件对象介绍与应用</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        <!--显示阅读次数完毕-->
-        
-        <a href="/zweizweisechs.github.io/2019/09/16/event事件对象/" class="archive-article-date">
-  	<time datetime="2019-09-16T13:50:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="event事件对象"><a href="#event事件对象" class="headerlink" title="event事件对象"></a>event事件对象</h2><blockquote>
-<p>介绍</p>
-</blockquote>
-<p>当一个事件发生的时候，和当前这个对象发生的这个事件邮观的一些详细的信息都会被临时保存到一个指定地方event对象，供我们在需要的调用。</p>
-<p>类比一下就是   <strong>飞机-黑匣子</strong></p>
-<p><strong>注意</strong>：事件对象必须要在一个事件调用的函数里面才有内容</p>
-<p><strong>事件函数：事件调用的函数，不是由函数定义决定，看调用的时候</strong></p>
-<p><code>function fn1(){alert(event)};fn1()</code>//不是一个事件调用</p>
-<p><code>function fn1(){alert(event);document.onclick=fn1;}</code>//是一个时间调用</p>
-<blockquote>
-<p>兼容</p>
-</blockquote>
-<p><strong>ie/chrome</strong>：event是一个内置全局对象</p>
-<p><strong>firefox</strong>:  事件对象是通过事件函数的第一个参数传入的。如果一个函数是被事件调用的，那么这个函数定义的第一个参数就是事件对象。</p>
-<p><code>function fn1(ev){alert(ev);}</code></p>
-<p><strong>解决兼容问题</strong></p>
-<p><img src="/zweizweisechs.github.io/images/code8.png" alt></p>
-        
-          <a class="article-more-a" href="/zweizweisechs.github.io/2019/09/16/event事件对象/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zweizweisechs.github.io/2019/09/16/event事件对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/zweizweisechs.github.io/page/2/">2</a><a class="extend next" rel="next" href="/zweizweisechs.github.io/page/2/">Next &raquo;</a>
@@ -1174,15 +1183,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">前端Vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">个人博客的第一篇博文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
             
             <div class="clearfix"></div>
