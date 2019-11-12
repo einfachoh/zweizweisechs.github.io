@@ -7,24 +7,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zweizweisechs.github.io">
-  <title>vue基础(二) 跑马灯示例 | 不愧是杨瑞妍的个人博客</title>
+  <title>Vue生命周期 | 不愧是杨瑞妍的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue基础（二） 跑马灯效果  实现构想：  给按钮绑定一个点击事件 写一个函数，拿到msg字符串，调用字符串的substring方法来来进行字符串的截取操作，，把第一个字符截取出来，放到最后一个位置即可 为了实现点击下按钮，自动截取的功能，需要把第二步的代码放在定时器里面  注意：在VM实例中，如果想要获取data上的数据，或者想要调用methods中的方法，必须通过this.数据属性名或thi">
+  <meta name="description" content="图解    说明   mouted（挂载）之前为初始化 中间为更新 最后为死亡">
 <meta name="keywords" content="前端Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue基础(二) 跑马灯示例">
-<meta property="og:url" content="https://zweizweisechs.github.io/2019/09/25/vue基础（二）/index.html">
+<meta property="og:title" content="Vue生命周期">
+<meta property="og:url" content="https://zweizweisechs.github.io/2019/11/12/Vue生命周期/index.html">
 <meta property="og:site_name" content="不愧是杨瑞妍的个人博客">
-<meta property="og:description" content="vue基础（二） 跑马灯效果  实现构想：  给按钮绑定一个点击事件 写一个函数，拿到msg字符串，调用字符串的substring方法来来进行字符串的截取操作，，把第一个字符截取出来，放到最后一个位置即可 为了实现点击下按钮，自动截取的功能，需要把第二步的代码放在定时器里面  注意：在VM实例中，如果想要获取data上的数据，或者想要调用methods中的方法，必须通过this.数据属性名或thi">
+<meta property="og:description" content="图解    说明   mouted（挂载）之前为初始化 中间为更新 最后为死亡">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code17.png">
-<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code18.png">
-<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/15s81-7xqrx.gif">
-<meta property="og:updated_time" content="2019-09-25T12:35:46.845Z">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/%E7%94%9F%E5%91%BD.gif">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code28.png">
+<meta property="og:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code29.png">
+<meta property="og:updated_time" content="2019-11-12T14:55:45.545Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue基础(二) 跑马灯示例">
-<meta name="twitter:description" content="vue基础（二） 跑马灯效果  实现构想：  给按钮绑定一个点击事件 写一个函数，拿到msg字符串，调用字符串的substring方法来来进行字符串的截取操作，，把第一个字符截取出来，放到最后一个位置即可 为了实现点击下按钮，自动截取的功能，需要把第二步的代码放在定时器里面  注意：在VM实例中，如果想要获取data上的数据，或者想要调用methods中的方法，必须通过this.数据属性名或thi">
-<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/code17.png">
+<meta name="twitter:title" content="Vue生命周期">
+<meta name="twitter:description" content="图解    说明   mouted（挂载）之前为初始化 中间为更新 最后为死亡">
+<meta name="twitter:image" content="https://zweizweisechs.github.io/zweizweisechs.github.io/images/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
   
     <link rel="alternative" href="/atom.xml" title="不愧是杨瑞妍的个人博客" type="application/atom+xml">
   
@@ -162,45 +163,55 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-vue基础（二）" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Vue生命周期" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vue基础(二) 跑马灯示例
+      Vue生命周期
     </h1>
   
 
         <!--显示阅读次数-->
         <!--显示阅读次数完毕-->
         
-        <a href="/zweizweisechs.github.io/2019/09/25/vue基础（二）/" class="archive-article-date">
-  	<time datetime="2019-09-25T12:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
+        <a href="/zweizweisechs.github.io/2019/11/12/Vue生命周期/" class="archive-article-date">
+  	<time datetime="2019-11-12T15:20:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="vue基础（二）"><a href="#vue基础（二）" class="headerlink" title="vue基础（二）"></a>vue基础（二）</h2><blockquote>
-<p>跑马灯效果</p>
+        <blockquote>
+<p>图解</p>
 </blockquote>
-<p>实现构想：</p>
+<p><img src="/zweizweisechs.github.io/images/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt></p>
+<blockquote>
+<p>说明</p>
+</blockquote>
 <ul>
-<li>给按钮绑定一个点击事件</li>
-<li>写一个函数，拿到msg字符串，调用字符串的substring方法来来进行字符串的截取操作，，把第一个字符截取出来，放到最后一个位置即可</li>
-<li>为了实现点击下按钮，自动截取的功能，需要把第二步的代码放在定时器里面</li>
+<li>mouted（挂载）之前为初始化</li>
+<li>中间为更新</li>
+<li>最后为死亡</li>
 </ul>
-<p><strong>注意：</strong>在VM实例中，如果想要获取data上的数据，或者想要调用methods中的方法，必须通过this.数据属性名或this.方法名来进行访问，这里的this就表示我们new出来的VM实例对象</p>
-<p><strong>substring语法</strong></p>
-<p><img src="/zweizweisechs.github.io/images/code17.png" alt></p>
-<p>[setInterval（）中this指向问题的三种解法]（<a href="https://www.cnblogs.com/zsqos/p/6188835.html）" target="_blank" rel="noopener">https://www.cnblogs.com/zsqos/p/6188835.html）</a></p>
-<p>代码：</p>
-<p><img src="/zweizweisechs.github.io/images/code18.png" alt></p>
-<p><strong>结果演示</strong></p>
-<p><img src="/zweizweisechs.github.io/images/15s81-7xqrx.gif" alt></p>
+<a id="more"></a>
+
+<p>mouted:初始化显示之后立即调用,定时器函数写在里面</p>
+<p>销毁vm:vm.$destory()</p>
+<p><strong>如果仅使用vm.$destory(),虽然可以让页面停止变化，因为Vm被消除，但定时器仍然未关闭，所以还需要清除定时器</strong></p>
+<p>beforeDestory:在beforeDestory中清除定时器</p>
+<blockquote>
+<p>最后实现效果</p>
+</blockquote>
+<p><img src="/zweizweisechs.github.io/images/%E7%94%9F%E5%91%BD.gif" alt></p>
+<p><img src="/zweizweisechs.github.io/images/code28.png" alt></p>
+<blockquote>
+<p>代码</p>
+</blockquote>
+<p><img src="/zweizweisechs.github.io/images/code29.png" alt></p>
 
       
 
@@ -291,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/09/25/vue基础（二）/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zweizweisechs.github.io/2019/11/12/Vue生命周期/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +317,9 @@
   
 <nav id="article-nav">
   
-    <a href="/zweizweisechs.github.io/2019/10/08/我被幸运包围着/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我被幸运包围着
-        
-      </div>
-    </a>
   
-  
-    <a href="/zweizweisechs.github.io/2019/09/24/Vue(一)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue基础(一) 基本指令</div>
+    <a href="/zweizweisechs.github.io/2019/11/06/Vue列表过滤和排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue列表过滤和排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
